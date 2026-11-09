@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Halloween Greeting Video Idea Board</title>
+<meta name="description" content="Pick a Halloween greeting video vibe, write a 15-second script, and export cleanly.">
+<meta name="robots" content="index,follow">
+<style>
+body{font-family:system-ui,sans-serif;max-width:740px;margin:2rem auto;padding:0 1rem;background:#0f0a1a;color:#f5f3ff}
+a{color:#c4b5fd} h1{color:#fde68a}
+.grid{display:grid;gap:.75rem;grid-template-columns:1fr 1fr}
+@media(max-width:560px){.grid{grid-template-columns:1fr}}
+.tile{border:1px solid #4c1d95;border-radius:10px;padding:.9rem;background:#1e1033;cursor:pointer}
+.tile:hover{border-color:#a78bfa}
+textarea{width:100%;min-height:110px;background:#12081f;color:#f5f3ff;border:1px solid #4c1d95;border-radius:8px;padding:.6rem}
+footer{margin-top:2rem;opacity:.8;font-size:.9rem}
+</style>
+</head>
+<body>
+<h1>Halloween Greeting Video Idea Board</h1>
+<p>Choose a vibe, draft 15 seconds, then render with <a href="https://aigreetingvideo.com/">AI Greeting Video</a>.</p>
+<div class="grid" id="vibes">
+<div class="tile" data-vibe="Spooky cute"><strong>Spooky cute</strong><br>Pumpkins + soft joke + warm wish.</div>
+<div class="tile" data-vibe="Classic horror parody"><strong>Classic horror parody</strong><br>Fake jump-scare, then a kind message.</div>
+<div class="tile" data-vibe="Costume show-and-tell"><strong>Costume show-and-tell</strong><br>Show the costume, then the greeting.</div>
+<div class="tile" data-vibe="Candy haul toast"><strong>Candy haul toast</strong><br>Share a sweet, keep it short.</div>
+</div>
+<p>Selected vibe: <strong id="picked">none yet</strong></p>
+<label>Script<textarea id="script" placeholder="Happy Halloween Sam — may your candy bowl stay full and your porch lights stay friendly."></textarea></label>
+<p>Occasion page: <a href="https://aigreetingvideo.com/halloween-video-card">Halloween video card</a>. Helpers: <a href="https://aigreetingvideo.com/tools/ai-greeting-card-generator">greeting card generator</a>, <a href="https://aigreetingvideo.com/tools/ai-wish-video-generator">wish video generator</a>, <a href="https://aigreetingvideo.com/tools">all tools</a>, <a href="https://aigreetingvideo.com/pricing">pricing</a>.</p>
+<footer>Unofficial board. Links point to aigreetingvideo.com.</footer>
+<script>
+document.querySelectorAll('.tile').forEach(t=>t.onclick=()=>{document.getElementById('picked').textContent=t.dataset.vibe});
+</script>
+</body>
+</html>
